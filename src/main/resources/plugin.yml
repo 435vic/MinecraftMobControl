@@ -1,9 +1,9 @@
 name: MobControl
-version: 0.8.0
-main: com.vicoquincis.mobcontrol.MobControl
+version: 1.0.0
+main: me.vicoquincis.mobcontrol.MobControl
 api-version: 1.14
 authors: [VicoQuinCis]
-description: Control any mob you find!
+description: Control (almost) any mob you find!
 depend: [LibsDisguises, ProtocolLib]
 commands:
   mobcontrol:

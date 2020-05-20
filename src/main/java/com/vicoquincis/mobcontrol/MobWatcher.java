@@ -10,6 +10,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class MobWatcher extends BukkitRunnable {
     @Override
     public void run() {
+        //TODO:
+        // Make cave spiders scale up walls (summon vines if near wall)
         if (MobControl.control.isStarted) {
             Player p = MobControl.control.getController();
             if (p.getFoodLevel() < 8) p.setFoodLevel(8);
