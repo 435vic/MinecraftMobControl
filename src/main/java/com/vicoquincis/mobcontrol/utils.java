@@ -39,12 +39,12 @@ public class utils {
 
     // Docile mobs only move around
     public static EntityType[] docileMobs = {
-        EntityType.CHICKEN,
         EntityType.COW,
         EntityType.PIG,
         EntityType.SHEEP,
         EntityType.HORSE,
         EntityType.DONKEY,
+        EntityType.CHICKEN,
         EntityType.MULE,
         EntityType.SKELETON_HORSE,
         EntityType.WOLF,

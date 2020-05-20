@@ -115,6 +115,25 @@ public class Listeners implements Listener {
     }
 
     @EventHandler
+    public void onPlayerChangeSlot(PlayerItemHeldEvent e) {
+        if (MobControl.control.isController(e.getPlayer())) {
+            Player p = e.getPlayer();
+            ItemStack heldItem = p.getInventory().getItem(e.getNewSlot());
+            if (heldItem != null) {
+                if (heldItem.isSimilar(ItemManager.getItem(ItemManager.items.COMPASS)))
+                    MobControl.control.isTracking = false;
+            }
+        }
+    }
+
+    @EventHandler
+    public void onPlayerMove(PlayerMoveEvent e) {
+        if (MobControl.control.isTracking && MobControl.control.isStarted) {
+            MobControl.control.getController().setCompassTarget(MobControl.control.tracking.getLocation());
+        }
+    }
+
+    @EventHandler
     public void onPlayerQuit(PlayerQuitEvent e) {
         if (MobControl.control.isController(e.getPlayer())) {
             MobControl.control.unSetController();

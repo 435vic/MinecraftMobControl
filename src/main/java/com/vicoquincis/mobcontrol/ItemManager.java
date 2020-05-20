@@ -292,7 +292,9 @@ public class ItemManager {
             hotbar.setItem(1, getItem(items.COMPASS));
             switch (p.getLocation().getWorld().getEnvironment()) {
                 case NORMAL:
-                    hotbar.setItem(2, getItem(items.NEAREST_HOSTILE));
+                    hotbar.setItem(0, getItem(items.COMPASS));
+                    hotbar.setItem(1, getItem(items.NEAREST_HOSTILE));
+                    hotbar.setItem(2, getItem(items.NEAREST_DOCILE));
                     hotbar.setItem(3, getItem(items.NEAREST_ZOMBIE));
                     hotbar.setItem(4, getItem(items.NEAREST_SKELETON));
                     hotbar.setItem(5, getItem(items.NEAREST_SPIDER));
@@ -487,6 +489,25 @@ public class ItemManager {
             if (witchIndex > 3) witchIndex = 0;
 
             p.setCooldown(getItem(items.WITCH_THROW_POTION).getType(), 50);
+        } else if (item.isSimilar(getItem(items.COMPASS))) {
+            if (Bukkit.getOnlinePlayers().size() < 2) {
+                p.sendMessage(ChatColor.RED + "No players to track");
+                return;
+            }
+
+            Player closest = p;
+            Location pLoc = p.getLocation();
+            for (Player pl : Bukkit.getOnlinePlayers()) {
+                if (pl == p) continue;
+                Location oldLoc = closest.getLocation();
+                Location entLoc = pl.getLocation();
+                if (pLoc.distance(entLoc) < pLoc.distance(oldLoc) || closest == p) {
+                    closest = pl;
+                }
+            }
+            p.sendMessage(ChatColor.AQUA + "Currently tracking " + closest.getName());
+            MobControl.control.isTracking = true;
+            MobControl.control.tracking = closest;
         }
     }
 }

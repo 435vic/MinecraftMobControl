@@ -16,6 +16,8 @@ import org.bukkit.potion.PotionEffectType;
 public class ControlManager {
     public boolean isStarted = false;
     public boolean isDisguised = false;
+    public boolean isTracking = false;
+    public Player tracking = null;
     private Player controller = null;
     private Plugin plugin;
 
