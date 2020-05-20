@@ -18,7 +18,7 @@ public class CommandHandler implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 2) {
-            if (args[0].equals("add")) {
+            if (args[0].equals("set")) {
                 Player p = Bukkit.getServer().getPlayer(args[1]);
                 if (p != null) {
                     MobControl.control.setController(p);
@@ -51,7 +51,7 @@ public class CommandHandler implements CommandExecutor, TabExecutor {
     public List<String> onTabComplete(CommandSender sender, Command command, String alias, String[] args) {
         String[] l = {};
         if (args.length == 0 || args.length == 1) {
-            l = new String[]{"add", "remove"};
+            l = new String[]{"set", "remove"};
         } else if (args.length == 2) {
             List<Player> c = (List<Player>)Bukkit.getServer().getOnlinePlayers();
             return Lists.transform(c, Player::getName);
