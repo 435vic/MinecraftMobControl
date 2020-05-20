@@ -1,0 +1,11 @@
+name: MobControl
+version: 0.8.0
+main: com.vicoquincis.mobcontrol.MobControl
+api-version: 1.14
+authors: [VicoQuinCis]
+description: Control any mob you find!
+depend: [LibsDisguises, ProtocolLib]
+commands:
+  mobcontrol:
+    description: "Control any mob you want!"
+    usage: "/mobcontrol [add|remove] (player name)"
