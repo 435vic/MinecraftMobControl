@@ -193,7 +193,6 @@ public class utils {
                 continue;
             }
         }
-//        System.out.println(to.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue());
         to.setHealth(from.getHealth());
     }
 
@@ -252,13 +251,11 @@ public class utils {
             Location oldLoc = closest.getLocation();
             Location entLoc = ent.getLocation();
             closest = ((closest == p || (entLoc.distance(pLoc) <= oldLoc.distance(pLoc))) && filter.test(ent)) ? ent : closest;
-//            System.out.println("[*] " + ent.getName() + " stats: filter? " + filter.test(ent) + ". closest? " + closest.getName());
         }
         return (closest instanceof Player) ? null : closest;
     }
 
     public static void disguiseAsNearestMob(Player p, double range, EntityType mobType) {
-        System.out.println("[*] disguise: " + mobType);
         Predicate<Entity> pr = en -> en.getType() == mobType;
         if (mobType == EntityType.SKELETON)
             pr = en -> (en.getType() == mobType) || (en.getType() == EntityType.STRAY);

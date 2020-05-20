@@ -338,7 +338,7 @@ public class ItemManager {
                     MobControl.control.getController().sendMessage(ChatColor.YELLOW + "Jackpot!" +
                                                                    ChatColor.GREEN + " You got a trident.");
                     return getItem(items.DROWNED_TRIDENT);
-                } else System.out.println("No trident, " + randf + " not less than 0.20");
+                }
         }
         return out;
     }

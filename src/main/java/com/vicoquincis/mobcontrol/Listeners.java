@@ -53,7 +53,6 @@ public class Listeners implements Listener {
         if (MobControl.control.isController(e.getPlayer()) && MobControl.control.isDisguised) {
             Disguise d = DisguiseAPI.getDisguise(e.getPlayer());
             if (utils.isFlyingMob(d.getType().getEntityType())) {
-                System.out.println("[*] Toggled sprint. Sprinting? " + e.isSprinting());
                 if (e.isSprinting()) {
                     e.getPlayer().setFlySpeed(0.04F);
                 } else {
@@ -100,7 +99,6 @@ public class Listeners implements Listener {
                 if (e.getItem().getType() == Material.POTION &&
                     p.getCooldown(ItemManager.getItem(ItemManager.items.WITCH_REGENERATE).getType()) == 0) {
 
-                    System.out.println("Consoomed " + e.getItem().getType());
                     p.setCooldown(ItemManager.getItem(ItemManager.items.WITCH_REGENERATE).getType(), 440);
                     (new BukkitRunnable() {
                         public void run() {
@@ -224,12 +222,10 @@ public class Listeners implements Listener {
         if (e.getEntity() instanceof Player) {
             if (MobControl.control.isController((Player)e.getEntity())) {
                 Player p = (Player)e.getEntity();
-                System.out.println(p.getCooldown(Material.BOW));
                 if (p.getCooldown(Material.BOW) != 0) {
                     e.setCancelled(true);
                     return;
                 }
-                System.out.println("SHOOT");
                 p.setCooldown(
                     Material.BOW,
                     30
