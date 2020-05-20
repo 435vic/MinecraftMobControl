@@ -1,5 +1,5 @@
 
-package com.vicoquincis.mobcontrol;
+package me.vicoquincis.mobcontrol;
 
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.disguisetypes.Disguise;

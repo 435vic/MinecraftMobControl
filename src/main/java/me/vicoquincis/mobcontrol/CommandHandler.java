@@ -1,4 +1,4 @@
-package com.vicoquincis.mobcontrol;
+package me.vicoquincis.mobcontrol;
 
 import com.google.common.collect.Lists;
 import me.libraryaddict.disguise.DisguiseAPI;

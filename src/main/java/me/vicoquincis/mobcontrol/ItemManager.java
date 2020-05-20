@@ -1,4 +1,4 @@
-package com.vicoquincis.mobcontrol;
+package me.vicoquincis.mobcontrol;
 
 import me.libraryaddict.disguise.DisguiseAPI;
 import me.libraryaddict.disguise.disguisetypes.Disguise;
@@ -17,7 +17,6 @@ import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.*;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import javax.swing.plaf.IconUIResource;
 import java.util.Random;
 
 public class ItemManager {

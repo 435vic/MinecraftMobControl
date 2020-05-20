@@ -1,4 +1,4 @@
-package com.vicoquincis.mobcontrol;
+package me.vicoquincis.mobcontrol;
 
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
