@@ -41,17 +41,52 @@ If you want to attack, you can attack with the stick.
 #### Skeleton
 ![hotbar6](https://i.ibb.co/wYsXjgs/skeleton-hotbar.png "skeleton hotbar")  
 Skeletons are self explanatory. You can shoot with the bow.  
-NOTE: Skeletons are also undead mobs, so will burn in the sunlight.
+NOTE: Skeletons are also undead mobs, so they'll also burn in the sunlight.
 
 #### Witch
 ![hotbar7](https://i.ibb.co/CBZqzMH/witch-hotbar.png "witch hotbar")  
 As a witch, you can throw a random negative potion, or regenerate health.
-Potions are chosen using a bag randomizer, which means you are guaranteed to get one of each potion (slowness, harming, poison and weakness) every  
+Potions are chosen using a bag randomizer, which means you are guaranteed to get one of each potion (slowness, harming, poison and weakness) every
 four potions. Each one has a 5% chance of being upgraded and a 5% chance of being extended (mutually exclusive).
 If you are running low on health, you can drink an Instant Healing potion.
 
 ### Nether
 The default hotbar on the Nether is this:  
 ![hotbar8](https://i.ibb.co/tBNLbHJ/nether-hotbar.png "nether hotbar")  
-Basically the same, but with different mobs.
+Basically the same, but with different mobs. All of them, except skeletons and endermen, are lava-proof and fire-proof.
 
+#### Blaze
+![hotbar9](https://i.ibb.co/s17vLC2/blaze-hotbar.png "blaze hotbar")  
+As Blazes can fly, you will too if you control them. You can't stop flying though, unless you stop controlling it.  
+If you select the first slot on the hotbar and right-click, you will emit a breathing sound effect, and throw three  
+fireballs in the direction you are looking at.
+
+#### Ghast
+![hotbar10](https://i.ibb.co/GT8cN7K/ghast-hotbar.png "ghast hotbar")  
+Similarly, you will fly when controlling Ghasts, and you will throw a fire charge if you right click on the first slot.  
+Be careful, though - you can shoot yourself if you're close to a wall or ceiling!
+
+#### Wither Skeleton
+![hotbar11](https://i.ibb.co/zZcD8Vq/witherskel-hotbar.png "wither skeleton hotbar")  
+Any mob you attack with the stone sword (slot 1) will have the Withering effect for 10 seconds.
+
+### The End
+You can only control the endermen in this dimension. Support for controlling the ender dragon will come in the future.
+
+## Gameplay changes
+- As an enderman, you will forcefully teleport randomly if you come in contact with water. You will lose one heart of health also.
+- As a skeleton, zombie, or drowned, you will catch on fire if you are exposed to sunlight.
+- Creepers, zombies and iron golems have slower movement speeds.
+- Drowned, fish, squids and other water mobs will give you water breathing if you control them.
+- You will have the Dolphin's Grace effect if you control a dolphin.
+- Mobs native to the nether will make you lava-proof and fire-proof.
+
+## Cooldowns
+Some items have a cooldown timer to balance the gameplay. Some examples are:
+- Skeleton bows
+- Making creepers explode
+- Attacking as an enderman
+- Attacking as a wither skeleton
+- Drinking a health potion
+- Throwing a fireball/fire charge
+- Teleportation and fleeing
