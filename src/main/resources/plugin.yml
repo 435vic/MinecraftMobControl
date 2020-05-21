@@ -1,5 +1,5 @@
 name: MobControl
-version: 1.0.0
+version: 1.0.1
 main: me.vicoquincis.mobcontrol.MobControl
 api-version: 1.14
 authors: [VicoQuinCis]
