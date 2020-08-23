@@ -6,7 +6,7 @@
 
     <groupId>me.vicoquincis.mobcontrol</groupId>
     <artifactId>MobControl</artifactId>
-    <version>1.0.1-DEV</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
 
     <name>MobControl</name>

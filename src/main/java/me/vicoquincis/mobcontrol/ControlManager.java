@@ -90,7 +90,7 @@ public class ControlManager {
             else {
                 double health = this.controller.getHealth();
                 double entmax = ent.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
-                ent.setHealth((health > entmax) ? entmax : health);
+                ent.setHealth(Math.min(health, entmax));
             }
             utils.resetAttributes(this.controller);
             disguise.stopDisguise();

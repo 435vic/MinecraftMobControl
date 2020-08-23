@@ -191,11 +191,13 @@ public class Listeners implements Listener {
                             e.setDamage(damage);
                             p.setCooldown(ItemManager.getItem(ItemManager.items.ENDERMAN_ATTACK).getType(), 35);
                         } else {
+                            e.setDamage(0.0D);
                             e.setCancelled(true);
                         }
 
                     case HUSK:
                     case ZOMBIE:
+                    case SPIDER:
                         double damage = 2.0D;
                         switch (p.getWorld().getDifficulty()) {
                             case NORMAL:
@@ -228,7 +230,7 @@ public class Listeners implements Listener {
                 }
                 p.setCooldown(
                     Material.BOW,
-                    30
+                    15
                 );
             }
         }
