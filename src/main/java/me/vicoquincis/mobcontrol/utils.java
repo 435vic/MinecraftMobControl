@@ -79,7 +79,6 @@ public class utils {
     // the following attributes will be applied to
     // them, like health, speed, etc.
     public static Attribute[] replicableAttributes = {
-        Attribute.GENERIC_MAX_HEALTH,
         Attribute.GENERIC_ATTACK_SPEED,
         Attribute.GENERIC_MOVEMENT_SPEED,
         Attribute.GENERIC_KNOCKBACK_RESISTANCE,
@@ -193,7 +192,21 @@ public class utils {
                 continue;
             }
         }
-        to.setHealth(from.getHealth());
+        if (isHostile(from)) {
+            setMaxHealth(getMaxHealth(from), to);
+            to.setHealth(from.getHealth());
+        } else {
+            setMaxHealth(12.0, to);
+            to.setHealth(12.0);
+        }
+    }
+
+    public static double getMaxHealth(LivingEntity ent) {
+        return ent.getAttribute(Attribute.GENERIC_MAX_HEALTH).getValue();
+    }
+
+    public static void setMaxHealth (double health, LivingEntity ent) {
+        ent.getAttribute(Attribute.GENERIC_MAX_HEALTH).setBaseValue(health);
     }
 
     public static void resetAttributes(LivingEntity target) {
@@ -206,6 +219,8 @@ public class utils {
                 continue;
             }
         }
+        setMaxHealth(target.getAttribute(Attribute.GENERIC_MAX_HEALTH).getDefaultValue(), target);
+        resetHealth((Player)target);
     }
 
     public static void randomTeleport(Player p) {

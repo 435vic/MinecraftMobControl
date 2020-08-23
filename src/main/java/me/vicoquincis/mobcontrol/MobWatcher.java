@@ -24,7 +24,9 @@ public class MobWatcher extends BukkitRunnable {
                         p.getWorld().getHighestBlockYAt(p.getLocation()) <= p.getLocation().getY() &&
                         !p.getWorld().hasStorm() &&
                         !p.getWorld().isThundering()
-                ) p.setFireTicks(60);
+                ) {
+                    p.setFireTicks(60);
+                }
                 else if (type == DisguiseType.ENDERMAN && p.getLocation().getBlock().isLiquid()) {
                     p.damage(2D);
                     utils.randomTeleport(p);

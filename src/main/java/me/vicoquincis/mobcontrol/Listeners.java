@@ -233,4 +233,11 @@ public class Listeners implements Listener {
             }
         }
     }
+
+    @EventHandler
+    public void onPlayerDeath(PlayerDeathEvent e) {
+        if (MobControl.control.isController((Player)e.getEntity())) {
+            MobControl.control.unDisguise(true);
+        }
+    }
 }
